@@ -1,0 +1,27 @@
+// string parse.cpp: Konsol uygulamasýnýn giriþ noktasýný tanýmlar.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "stdio.h"
+#include "string.h"
+int main()
+{
+	char veri[] = "0000000:0000000:12340002C5:DSFSDFJSDF:-67";
+    char id[] = "12340002";
+	char *data;
+	int onluk;
+	int birlik;
+	int sayi;
+	data= strstr(veri,id);
+
+	onluk = (data[23] - '0')*10;
+	birlik = data[24] - '0';
+	sayi = onluk + birlik;
+	printf("%d\n",sayi);
+
+
+	system("pause");
+    return 0;
+}
+
